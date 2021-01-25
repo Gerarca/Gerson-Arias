@@ -1,122 +1,142 @@
-*{
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+* {
+	padding:0;
+	margin:0;
+	font-family: Helvetica, Gill Sans Extrabold, sans-serif;
+	color: black;	
 }
 
-header{	
-	width: 100%;
-	height: auto;	
-	background-color: black;
-	display: flex;
-	justify-content: center;
+body {
+	background:#FFFFFA;
 }
 
-.main{
-	width: 95%;
-	height: auto;
-	background-color: black; 
-	display: flex; 
+header {
+	width:100%;	
+	background-color: #1e90ff; 	
 }
 
-.main__l{
-	width: 10%;
-	height: auto;
-	padding: 10px 0px 0px 0px;
+header nav {
+	width: 90%;
+	margin: 10px auto;
+	max-width:1000px; 
 }
 
-.main__l--i{
-	width: 50px;
-	height: 50px;
+.menu_bar {
+	display:none;
 }
 
-.mainMenu{
-	width: 80%;
-	height: auto;	
-	display: flex;
-	justify-content: flex-end;
+header nav ul {
+	list-style:none;
+	overflow:hidden;
 }
 
-.lang{
-	width: 10%;
-	height: 30px;	
-	display: flex;
-	justify-content: flex-end;
-	margin: 10px 0px 0px 20px;	
-}
-
-.lang_select{
-	text-align: right;
-	align-items: right;
-	background-color: black;
-	color: white;
-	border: dotted 0px black;
+header nav ul li {
+	float: left;
 }
 
 li{
-	height: 0px;
-	float: left;
-	list-style: none;
-	padding: 20px;
-	color: white;
+	display: flex;
+	align-items: center;
 }
 
-a{
-	text-decoration: none;
-	font-family: verdana; 
-	color: white;
+header nav ul li span {
+	margin-left: 10px;
+	text-align: center;
 }
 
-li:hover a{
+header nav ul li a{
+	display:block; 
+	text-align: left;
+	align-items: center;
+	margin: 0px 20px 0px 0px;
+	padding: 10px;
+	color: #000000;
+	text-decoration:none; 
+	font-weight: bold;
+}
+
+header nav ul li:hover, a:hover{
+	background: rgb(0, 100, 250);	
+	padding: auto;
 	text-decoration: none;
-	color: black;
-	background: white;
-	padding: 5px;
-  	border: 4px solid white;
-  	border-radius: 15px 50px 30px;
-  	padding: 8px;	
+	color: #000000;
+}
+
+.lang_select{
+	padding-top: 8px;
+	background-color: #1e90ff;
+	border-color: #1e90ff;
+	color: #000000;
+	text-decoration: none;			 
+	position: absolute;
+	vertical-align: middle;
+	left: 80%;
+	top: 2%; 
+}
+
+.lang_select span{
+	margin: 0px 10px 0px 10px;
+
+}
+
+.lang_select:hover{
+	background-color: #1e90ff;
+}
+
+article{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .sectioncero{
 	width: 100%;
 	height: auto;
-	display: flex;
+	display: flex; 
 	justify-content: center;
 	background-color: black;
-	padding: 30px 0px 20px 8px;
 }
 
 .sectioncero__p{
 	width: 80%;
 	height: auto;
 	display: flex;	
+	flex-wrap: wrap;
+	background-color: black;
+	padding: 0px 0px 0px 0px; 	
 }
 
-.sectioncero__p--p{
-	width: 50%;
-	height: auto;
-	text-align: left;
-	color: white;
-	size: 30px;
+.in-flex{
+	flex: 1;	
+	min-width: 250px; 
 }
 
-.sectioncero__p--i{
-	width: 50%;
-	height: auto;
-	text-align: right;
+.in-flex:first-child{	
+	flex: 1;
+	background-color: #000000;	
+}
+
+.in-flex div{
+	background-color: #00000;
+	color: #ffffff;  
+}
+
+.flex-2{
 	display: flex;
-	justify-content: flex-end;	
+	justify-content: flex-end;
 }
 
 .sectioncero__p--i--i{
-	width: 400px;
+	width: 250px;
 	height: 250px;	
 }
 
-article{
-	width: 100%;
-	height: auto;
+.sectioncero__p--p{
+	padding: 10px;
+	text-align: left;
+	color: white;
+	font-size: 20px;
 }
+
 
 p, .sO__me2 p{
 	font-family: verdana;
@@ -157,7 +177,7 @@ h6, .cvc_company, .intimidades_comp{
 	padding: 0px 0px 0px 0px;
     width: 80%;
     height: auto;
-	box-shadow:  10px 5px 5px black;
+	box-shadow:  10px 10px 20px black;
 	background-color: rgba(236, 255, 255, 0.5);    
 }
 
@@ -209,7 +229,15 @@ h6, .cvc_company, .intimidades_comp{
 .sectionTwo{
 	padding: 50px 0px 0px 0px;
 	width: 	100%;
-	height: auto;  
+	height: auto; 
+	display: flex;
+	justify-content: center; 
+}
+
+.sectionTwo__cont{
+	width: 80%;
+	box-shadow:  10px 10px 20px black;
+    background-color: rgba(236, 255, 255, 0.5);
 }
 
 .sectionTwo a{
@@ -218,12 +246,8 @@ h6, .cvc_company, .intimidades_comp{
 }
 
 .studiesOne{
-	padding: 0px 0px 0px 0px;
-	background-color: rgba(236, 255, 255, 0.5);
-	box-shadow:  10px 5px 5px black;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;	       
+	background-color: rgba(236, 255, 255, 0.5); 
+    width: 100%;    
 }
 
 .contentUNY{
@@ -234,7 +258,7 @@ h6, .cvc_company, .intimidades_comp{
 
 .logoUNY{
 	padding: 10px 10px 10px 10px;
-	width: 250px;
+	width: 200px;
 	height: 300px;
 	max-width: ;
 	max-height: ; 		
@@ -248,12 +272,8 @@ h6, .cvc_company, .intimidades_comp{
 }
 
 .studiesTwo{
-	padding: 0px 0px 0px 0px;
-    background-color: rgba(236, 255, 255, 0.5);
-	box-shadow:  10px 5px 5px black;    
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;	       
+    background-color: rgba(236, 255, 255, 0.5);    
+    width: 100%;	       
 }
 
 .contentFUNDAUC{
@@ -264,10 +284,8 @@ h6, .cvc_company, .intimidades_comp{
 
 .logoFUNDAUC{
 	padding: 10px 10px 10px 10px;
-	width: 250px;
+	width: 200px;
 	height: 200px;
-	max-width: ;
-	max-height: ; 
 }
 
 .descripcionfundauc{
@@ -278,12 +296,8 @@ h6, .cvc_company, .intimidades_comp{
 }
 
 .studiesthree{
-	padding: 0px 0px 0px 0px;
-    background-color: rgba(236, 255, 255, 0.5);
-	box-shadow:  10px 5px 5px black;    
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;	        
+    background-color: rgba(236, 255, 255, 0.5);    
+    width: 100%;	        
 }
 
 .contentUCLA{
@@ -294,7 +308,7 @@ h6, .cvc_company, .intimidades_comp{
 
 .logoUCLA{
 	padding: 10px 10px 10px 10px;
-	width: 250px;
+	width: 200px;
 	height: 300px;	
 }
 
@@ -315,7 +329,7 @@ h6, .cvc_company, .intimidades_comp{
 .contentSkills{
 	padding: 0px 0px 0px 0px;
     background-color: rgba(236, 255, 255, 0.5);
-	box-shadow:  10px 5px 5px black;    
+	box-shadow:  10px 10px 20px black;    
     width: 80%;
     height: auto;
     margin-left: auto;
@@ -335,11 +349,12 @@ h6, .cvc_company, .intimidades_comp{
 
 .skill{
 		margin: 10px;
-		padding: 5px;		
+		padding: 5px;	
+		box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5) inset;	
 }
 
 .caja{
-	width: 200px;
+	width: 180px;
 	height: 150px;
 	margin: 5px;
 	line-height: 150px;
@@ -400,7 +415,7 @@ h6, .cvc_company, .intimidades_comp{
 
 .contentBiefcase{
     background-color: rgba(236, 255, 255, 0.5);
-	box-shadow:  10px 5px 5px black;    
+	box-shadow:  10px 10px 20px black;    
     width: 80%;
     height: auto;
     margin-left: auto;
@@ -414,11 +429,18 @@ h6, .cvc_company, .intimidades_comp{
 	padding: 10px 3px 10px 0px;	
 	display: flex;
 	justify-content: center;
+}	
+
+.briefcase_logo{
+	width: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .contentBiefcase__one-Imagen{
 	padding: 10px 10px 10px 10px;
-	width: 20%;
+	width: 180px;
 	height: 180px;
 	text-align: center;
 }
@@ -440,8 +462,8 @@ h6, .cvc_company, .intimidades_comp{
 .contentBiefcase__two-Imagen{
 	text-align: center;
 	padding: 10px 10px 10px 10px;
-	width: 20%;
-	height: auto;
+	width: 100px;
+	height: 100px;
 }
 
 .contentBiefcase__two-content{
@@ -525,8 +547,200 @@ footer{
 	margin:  0px 0px 0px 0px;	
 }
 
+.ir-arriba {
+	padding:20px;
+	display:inline-block;
+	background:#1e90ff;
+	color:#fff;
+	position: fixed;
+	font-size:20px;
+	bottom:20px;
+	right:20px;
+	display:none;
+	cursor:pointer;
+}
+
 body{
 	background: rgba(248, 255, 255, 0.5);
 }
 
 
+@media screen and (max-width:800px) {
+	header nav {
+		width:80%;
+		height:auto;
+		margin:0;
+		left:-100%;
+		overflow:auto; 
+		background:#ffffff;
+		position: fixed;
+		top: 100px;
+	}
+
+	.menu_bar {
+		display: block;
+		width:100%;
+		background:#1e90ff; 
+		position: fixed; /*mantener el menu estatico en el top*/
+	}
+
+	.menu_bar .bt-menu {
+		display:block;
+		padding:20px;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+		background:#1e90ff;
+		overflow: hidden;
+		font-size:25px;
+		font-weight:bold;
+		color:#000000;
+		text-decoration:none;
+	}
+
+	.menu_bar span {
+		float:right;
+		font-size:40px;
+	}
+
+	header nav ul li {
+		display:flex; 
+		float:none; 
+		flex-direction: row;
+		border-bottom:1px solid rgb(255, 255, 255); 		
+	}
+
+	/*
+	header nav ul li span a{
+		top: 20%;
+		align-self: left;		
+	}*/
+
+	.lang_select{
+		background-color: #ffffff;
+		border-color: #ffffff;
+		color: #000000;
+		font-weight: bold;
+		text-decoration: none;	
+		position: relative;
+		vertical-align: none;
+		left: 0%;
+		top: 0%;			
+	}	
+
+	.lang_select:hover{
+		background-color: rgb(0, 100, 250);
+	}
+	
+	.sectioncero{
+		margin-top: 100px;		
+	}
+
+	.sectioncero__p{
+		width: 100%;
+		display: flex;
+	}
+
+	.in-flex{
+		width: 100%;		
+		padding: 10px;
+	}
+
+	.in-flex:first-child{	
+		flex: 1;		
+		align-items: left; 
+	}
+
+	.flex-2{
+		align-items: right;
+	}
+
+	.sectioncero__p--p h1, h3{
+		font-size: 20px;
+		align-items: left;		
+	}
+
+  	.sectioncero__p--i--i{
+		width: 200px;
+		height: 200px;	
+	}	
+
+	.sO__me1, .sectionTwo__cont, .contentSkills, .contentBiefcase{
+		width: 95%;
+	}
+
+	.sO__me1--t--tr1, .sO__me1--t--tr2, .sO__me1--t--tr3, .sO__me1--t--tr4{
+		with: 100%;
+		display: grid;
+		justify-content: flex-start;
+	}	
+
+	.sO__me1--t--tr1--td1, .sO__me1--t--tr1--td2, .sO__me1--t--tr2--td1, .sO__me1--t--tr2--td2, .sO__me1--t--tr3--td1, .sO__me1--t--tr3--td2, .sO__me1--t--tr4--td1, .sO__me1--t--tr4--td2{
+		width: 100%;
+	}
+
+	.contentUNY, .contentUCLA{
+		width: 100%;
+		display: grid;
+		justify-content: flex-end; 		
+	}
+
+	.contentFUNDAUC{
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.div_logo{
+		display: flex;
+		justify-content: center; 	
+	}
+
+	.logoUNY, .logoUCLA{
+		padding: 10px 10px 10px 10px;
+		width: 100px;
+		height: 150px;
+	} 
+
+	.logoFUNDAUC{
+		padding: 10px 10px 10px 10px;
+		width: 150px;
+		height: 150px;	
+	}
+	
+	.descripcionUNY, .descripcionfundauc, .descripcionUCLA{
+		width: 100%;
+		height: auto;
+		text-align: justify; 
+	}
+
+	.contentBiefcase__one, .contentBiefcase__two{
+		width: 100%;
+		display: grid;
+		justify-content: flex-end;
+	}
+
+	.briefcase_logo{
+		width: 100%;
+		display: flex;
+		justify-content: center
+	}
+
+	.contentBiefcase__one-Imagen{
+		width: 150px;
+		height: 150px;
+	}
+
+	.contentBiefcase__two-Imagen{
+		width: 100px;
+		height: 100px;
+	}	
+
+	.footer{
+		width: 100%;
+		height: auto;
+		display: flex;
+		display: grid;
+	}
+}
+	
